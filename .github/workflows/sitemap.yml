@@ -2,8 +2,8 @@ name: Generate Sitemap
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # otomatis tiap hari jam 00:00 UTC
-  workflow_dispatch:       # bisa dijalankan manual dari GitHub Actions tab
+    - cron: "0 0 * * *"   # otomatis setiap hari jam 00:00 UTC
+  workflow_dispatch:       # bisa dijalankan manual dari tab Actions
 
 jobs:
   build:
@@ -28,6 +28,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add sitemap.xml
-          git commit -m "Auto update sitemap"
+          git commit -m "Auto update sitemap" || echo "No changes"
           git push
-          

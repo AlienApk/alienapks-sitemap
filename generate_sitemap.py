@@ -1,6 +1,6 @@
 import requests
 
-BLOG_URL = "https://alienapks.com"  # ganti dengan domain blog kamu
+BLOG_URL = "https://alienapks.blogspot.com"  # ganti dengan domain blog kamu
 FEED_URL = f"{BLOG_URL}/feeds/posts/summary?alt=json&max-results=500"
 
 r = requests.get(FEED_URL).json()
